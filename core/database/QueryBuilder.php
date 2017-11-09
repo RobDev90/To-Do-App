@@ -4,7 +4,7 @@ class QueryBuilder
 {
     protected $pdo;
 
-    public function __construct($pdo)
+    public function __construct(PDO $pdo) //type hinted variable - pass in PDO object
     {
         $this->pdo = $pdo;
     }
