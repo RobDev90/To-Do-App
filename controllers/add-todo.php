@@ -16,7 +16,6 @@ $fields = [
     'due_date' => $formattedDueDate
 ];
 
-
 $app['database']->insert('todos', $fields);
 
 require 'views/add-todo.view.php';
