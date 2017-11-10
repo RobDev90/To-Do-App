@@ -1,10 +1,21 @@
 <?php
 
+$strDateAdded = new DateTime(date('Y-m-d'));
+$strDueDate = new DateTime($_POST['due_date']);
+
+$dateAddedTS = $strDateAdded->getTimestamp(); // Unix timestamp
+$dueDateTS = $strDueDate->getTimestamp(); // Unix timestamp
+
+$formattedDateAdded = $strDateAdded->format('Y-m-d');
+$formattedDueDate = $strDueDate->format('Y-m-d');
+
 $fields = [
     'title' => $_POST['title'],
     'description' => $_POST['description'],
-    'due_date' => $_POST['due_date']
+    'date_added' => $formattedDateAdded,
+    'due_date' => $formattedDueDate
 ];
+
 
 $app['database']->insert('todos', $fields);
 

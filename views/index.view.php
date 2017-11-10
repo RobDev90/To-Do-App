@@ -22,7 +22,7 @@
 	<input name="description"></input>
 	<br/><br/>
 	<label for="due_date">Due Date</label>
-	<input name="due_date"></input>
+	<input type="date" name="due_date"></input>
 	<br/><br/>
 	<button type="submit">Add</button>
 </form>
