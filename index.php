@@ -1,5 +1,6 @@
 <?php
 
+require 'vendor/autoload.php'; // Composer autoloader
 require 'core/bootstrap.php';
 $router = Router::load('routes.php');
 
