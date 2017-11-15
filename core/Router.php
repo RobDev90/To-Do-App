@@ -61,9 +61,6 @@ class Router
 
         return $controller->$action();
 
-        return (new $controller)->$action();
-
-
     }
 
 }
